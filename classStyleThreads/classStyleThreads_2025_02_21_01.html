@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>万源中学钱学森班</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: "楷体";
+            scroll-behavior: smooth;
+        }
+
+        .headerContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .logoAndTitle {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoImage {
+            height: 100px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .slogan {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navLinks {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navLinks li {
+            margin: 0 15px;
+        }
+
+        .navLinks a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        .contentContainer {
+            padding: 20px;
+            text-align: left;
+        }
+
+
+        .articleContainer h2 {
+            text-align: center; /* 标题居中 */
+        }
+
+        .articleContainer img{
+            width:50%;
+            text-align: center;
+        }
+
+        .articleInfo {
+            color: gray;
+            text-align: center; /* 文章信息居中 */
+        }
+
+        .articleImageContainer{
+            text-align: center;
+        }
+
+        /* 回到顶部按钮样式 */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
+        /* 移动端样式 */
+        @media screen and (max-width: 768px) {
+            .headerContainer {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .logoAndTitle {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .logoImage {
+                height: 80px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .slogan h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .navLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navLinks li {
+                margin: 5px 0;
+            }
+
+            .navLinks a {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerContainer">
+            <div class="logoAndTitle">
+                <img src="../img/logo.png" class="logoImage" alt="万源中学钱学森班 Logo"
+                    onclick="window.location.href='../index.html'">
+                <div class="slogan">
+                    <h1 onclick="window.location.href='../index.html'">万源中学钱学森班</h1>
+                </div>
+            </div>
+            <ul class="navLinks">
+                <li><a href="../index.html">回到主页</a></li>
+            </ul>
+        </div>
+
+        <div class="contentContainer">
+            <div class="articleContainer">
+                <h2>以钱学森之名，开启科学报国新征程</h2>
+                <p class="articleInfo">最后编辑于：2025年2月21日13:39:24   作者：DeepSeek  校对：李仲轩</p>
+                <div class="articleImageContainer"><img src="img/classStyleThreads_2025_02_21_13_09.png" class="articleImage"></div>
+                <p>在这春暖花开、万象更新的美好季节，万源中学高2028届钱学森班迎来了朝气蓬勃的新同学。站在新的起点上，我们不仅要传承钱学森先生"爱国、奉献、求真、创新"的精神品格，更要以实际行动践行科学报国的崇高理想。</p>
+                <p>钱学森先生是中国航天事业的奠基人，是享誉世界的科学家。他放弃美国优厚待遇，毅然回国投身祖国建设的事迹，激励着一代代青年学子。在钱学森班这个特殊的集体中，我们不仅要学习科学知识，更要传承钱学森先生"科学无国界，但科学家有祖国"的爱国情怀。这种情怀不是空洞的口号，而是体现在每一次实验的严谨态度，每一道习题的认真思考，每一个科研项目的执着追求中。</p>
+                <p>科学探索的道路从来都不是一帆风顺的。钱学森先生在美国求学期间，曾经历过种族歧视和不公正待遇，但他始终保持着对科学真理的执着追求。这种精神告诉我们，在求知的道路上，要敢于面对困难，勇于突破自我。在钱学森班，我们要培养"板凳要坐十年冷"的定力，在实验室里反复验证，在图书馆里潜心钻研，在学术交流中碰撞思想火花。</p>
+                <p>创新是科学发展的灵魂。钱学森先生开创的工程控制论，为现代科学技术发展开辟了新天地。在钱学森班，我们要培养创新思维，敢于质疑权威，勇于提出新观点。在课堂上积极思考，在实验中大胆尝试，在科研中勇于突破。让创新成为我们学习生活的常态，让创造成为我们青春最亮丽的底色。</p>
+                <p>站在新的历史起点上，我们这一代青年肩负着实现中华民族伟大复兴的重任。钱学森班不仅是一个荣誉的称号，更是一份沉甸甸的责任。让我们以钱学森先生为榜样，以科学报国为己任，在知识的海洋里遨游，在创新的天空中翱翔，用实际行动书写属于我们这一代人的精彩篇章。</p>
+                <p>同学们，让我们携手并进，以昂扬的斗志、饱满的热情投入到新的学习生活中去。在钱学森精神的指引下，努力成长为有理想、有本领、有担当的新时代青年，为实现中华民族伟大复兴的中国梦贡献自己的智慧和力量！</p>
+            </div>
+        </div>
+
+        <!-- 回到顶部按钮 -->
+        <button id="backToTopBtn" title="回到顶部">↑</button>
+        <hr>
+        <p style="color: gray;">©万源中学高2028届钱学森班 2025，保留所有权利。</p>
+    </div>
+
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // 当用户滚动页面时显示或隐藏按钮
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // 点击按钮时平滑滚动到顶部
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+
+</html>

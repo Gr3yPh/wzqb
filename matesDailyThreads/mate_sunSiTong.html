@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>万源中学钱学森班</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: "楷体";
+            scroll-behavior: smooth;
+        }
+
+        .headerContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .logoAndTitle {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoImage {
+            height: 100px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .slogan {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navLinks {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navLinks li {
+            margin: 0 15px;
+        }
+
+        .navLinks a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        .contentContainer {
+            padding: 20px;
+            text-align: left;
+            display: grid;
+            grid-template-columns: 30% auto;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+
+        .mateContainer{
+            text-align: center;
+            padding: 10px;
+        }
+
+        .mateTouxiang{
+            width:30%;
+        }
+
+        .mateLink{
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 回到顶部按钮样式 */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
+        /* 移动端样式 */
+        @media screen and (max-width: 768px) {
+            .headerContainer {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .logoAndTitle {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .logoImage {
+                height: 80px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .slogan h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .navLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navLinks li {
+                margin: 5px 0;
+            }
+
+            .navLinks a {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerContainer">
+            <div class="logoAndTitle">
+                <img src="../img/logo.png" class="logoImage" alt="万源中学钱学森班 Logo"
+                    onclick="window.location.href='../index.html'">
+                <div class="slogan">
+                    <h1 onclick="window.location.href='../index.html'">万源中学钱学森班</h1>
+                </div>
+            </div>
+            <ul class="navLinks">
+                <li><a href="../index.html">回到主页</a></li>
+            </ul>
+        </div>
+        <div class="contentContainer">
+            <div class="mateContainer">
+                <img src='img/unknownMate.png' class="mateTouxiang"><br>
+                <a class="mateLink" href="mate_sunSiTong.html">孙思桐</a><br>
+                <span>团支书</span>
+            </div>
+        </div>
+
+        <!-- 回到顶部按钮 -->
+        <button id="backToTopBtn" title="回到顶部">↑</button>
+        <hr>
+        <p style="color: gray;">©万源中学高2028届钱学森班 2025，保留所有权利。</p>
+    </div>
+
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // 当用户滚动页面时显示或隐藏按钮
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // 点击按钮时平滑滚动到顶部
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+
+</html>

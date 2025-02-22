@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>万源中学钱学森班</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: "楷体";
+            scroll-behavior: smooth;
+        }
+
+        .headerContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .logoAndTitle {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoImage {
+            height: 100px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .slogan {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navLinks {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navLinks li {
+            margin: 0 15px;
+        }
+
+        .navLinks a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        .contentContainer {
+            padding: 20px;
+        }
+
+        .introContainer {
+            text-align: left;
+        }
+
+        .teacherContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+
+        .introImage {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .mateContainer {
+            text-align: center;
+            border: 1px solid rgb(228, 228, 228);
+            border-radius: 2px;
+            padding: 10px;
+        }
+
+        .mateTouxiang {
+            width: 30%;
+        }
+
+        .mateLink {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 回到顶部按钮样式 */
+        #backToTopBtn {
+            display: none;
+            /* 默认隐藏 */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
+        .articleContainer {
+            display: grid;
+            grid-template-columns: 20% auto;
+            column-gap: 10px;
+            padding: 20px;
+        }
+
+        .articlePoster {
+            width: 80%;
+        }
+
+
+        /* 移动端样式 */
+        @media screen and (max-width: 768px) {
+            .headerContainer {
+                flex-direction: column;
+                /* 将内容垂直排列 */
+                align-items: center;
+                /* 居中对齐 */
+                padding: 10px;
+                /* 减少内边距 */
+            }
+
+            .logoAndTitle {
+                flex-direction: column;
+                /* logo和标题垂直排列 */
+                align-items: center;
+                /* 居中对齐 */
+                margin-bottom: 10px;
+                /* 增加间距 */
+            }
+
+            .logoImage {
+                height: 80px;
+                /* 缩小logo大小 */
+                margin-right: 0;
+                /* 移除右边距 */
+                margin-bottom: 10px;
+                /* 增加底部间距 */
+            }
+
+            .slogan h1 {
+                font-size: 24px;
+                /* 缩小标题字体大小 */
+                text-align: center;
+                /* 标题居中 */
+            }
+
+            .navLinks {
+                flex-direction: column;
+                /* 导航链接垂直排列 */
+                align-items: center;
+                /* 居中对齐 */
+            }
+
+            .navLinks li {
+                margin: 5px 0;
+                /* 调整导航链接间距 */
+            }
+
+            .navLinks a {
+                font-size: 16px;
+                /* 缩小导航链接字体大小 */
+            }
+
+            .teacherContainer {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .threadsLink {
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerContainer">
+            <div class="logoAndTitle">
+                <img src="img/logo.png" class="logoImage" alt="万源中学钱学森班 Logo"
+                    onclick="window.location.href='index.html'">
+                <div class="slogan">
+                    <h1 onclick="window.location.href='index.html'">万源中学钱学森班</h1>
+                </div>
+            </div>
+            <ul class="navLinks">
+                <li><a href="#classStyle">班级风采</a></li>
+                <li><a href="#matesDaily">同学日常</a></li>
+                <li><a href="#teacherInfo">师资力量</a></li>
+                <li><a onclick="alert('请联系管理员李仲轩的QQ：3175217190或在班级群中申请发布！')" style="cursor: pointer;">发布内容</a></li>
+                <li><a href="#contactUs">联系我们</a></li>
+            </ul>
+        </div>
+
+        <div class="contentContainer">
+            <div class="introContainer" id="classStyle">
+                <h3>班级风采</h3>
+                <div class="articleContainer">
+                    <img src="classStyleThreads/img/classStyleThread_2025_02_22_02.png" class="articlePoster">
+                    <div>
+                        <a class="threadsLink"
+                            href="classStyleThreads/classStyleThreads_2025_02_22_01.html">笑声中的成长：一次难忘的英语角色扮演</a>
+                        <p>昨天下午的英语课上，我们班进行了一场别开生面的角色扮演活动，将原本枯燥的课文演绎得妙趣横生，教室里充满了欢声笑语。活动共分为三组，每组都需要对课文内容进行改编和演绎。虽然大家的演技还略显青涩，甚至有些“令人笑掉大牙”……
+                        </p>
+                    </div>
+                </div>
+                <div class="articleContainer">
+                    <img src="classStyleThreads/img/classStyleThreads_2025_02_21_13_09.png" class="articlePoster">
+                    <div>
+                        <a class="threadsLink"
+                            href="classStyleThreads/classStyleThreads_2025_02_21_01.html">以钱学森之名，开启科学报国新征程</a>
+                        <p>在这春暖花开、万象更新的美好季节，万源中学高2028届钱学森班迎来了朝气蓬勃的新同学。站在新的起点上，我们不仅要传承钱学森先生"爱国、奉献、求真、创新"的精神品格，更要以实际行动践行科学报国的崇高理想……
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <br>
+            <hr>
+            <div class="introContainer" id="matesDaily">
+                <h3>同学日常</h3>
+                <strong><a href="matesDailyThreads/matesList.html"
+                        style="text-decoration: none;color: black;">全部同学信息></a></strong>
+                <p>暂时没有同学发布日常哦~</p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="introContainer" id="teacherInfo">
+                <h3>师资力量</h3>
+                <div class="teacherContainer">
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/math.html">黄少林</a><br>
+                        <span>数学老师、班主任</span>
+                    </div>
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/history.html">陈国玲</a><br>
+                        <span>历史老师、副班主任</span>
+                    </div>
+              
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/chinese.html">蒋宁苇</a><br>
+                        <span>语文老师</span>
+                    </div>
+              
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/english.html">龚福超</a><br>
+                        <span>英语老师</span>
+                    </div>
+            
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/physics.html">张森</a><br>
+                        <span>物理老师</span>
+                    </div>
+             
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/chemics.html">蒲琼贤</a><br>
+                        <span>化学老师</span>
+                    </div>
+            
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/biology.html">刘芬</a><br>
+                        <span>生物老师</span>
+                    </div>
+             
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/politics.html">何青龙</a><br>
+                        <span>政治老师</span>
+                    </div>
+         
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/geographic.html">陈礼芳</a><br>
+                        <span>地理老师</span>
+                    </div>
+       
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/phsycology.html">李鑫宇</a><br>
+                        <span>心理老师</span>
+                    </div>
+          
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/pe.html">孟怀林</a><br>
+                        <span>体育老师</span>
+                    </div>
+       
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/art.html">徐胜</a><br>
+                        <span>美术老师</span>
+                    </div>
+        
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/music.html">杨德超</a><br>
+                        <span>音乐老师</span>
+                    </div>
+       
+                    <div class="mateContainer">
+                        <img src='matesDailyThreads/img/unknownMate.png' class="mateTouxiang"><br>
+                        <a class="mateLink" href="teacherInfo/handwriting.html">王敬</a><br>
+                        <span>书法老师</span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="introContainer" id="contactUs">
+                <h3>联系我们</h3>
+                <h4>站点管理员-李仲轩：</h4>
+                <ul>
+                    <li>电子邮箱：lzx20100624@outlook.com</li>
+                    <li>QQ：3175217190</li>
+                    <li>微信号：nobody_hacker</li>
+                </ul>
+            </div>
+            <br><br>
+            <hr>
+            <!-- 回到顶部按钮 -->
+            <button id="backToTopBtn" title="回到顶部">↑</button>
+            <p style="color: gray;">©万源中学高2028届钱学森班 2025，保留所有权利。</p>
+        </div>
+    </div>
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // 当用户滚动页面时显示或隐藏按钮
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
