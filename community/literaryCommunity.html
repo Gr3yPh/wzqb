@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>山海有嘉木 - 万中钱班文学社</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        body {
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('../img/literaryBackground.jpg') center no-repeat;
+            background-size: cover;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: serif;
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        .headerContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logoAndTitle {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoImage {
+            height: 100px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .slogan {
+            font-size: 32px; /* 放大标题字体大小 */
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navLinks {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navLinks li {
+            margin: 0 15px;
+        }
+
+        .navLinks a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        /* 回到顶部按钮样式 */
+        #backToTopBtn {
+            display: none;
+            /* 默认隐藏 */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
+        /* 移动端样式 */
+        @media screen and (max-width: 768px) {
+            .headerContainer {
+                flex-direction: column;
+                /* 将内容垂直排列 */
+                align-items: center;
+                /* 居中对齐 */
+                padding: 10px;
+                /* 减少内边距 */
+            }
+
+            .logoAndTitle {
+                flex-direction: column;
+                /* logo和标题垂直排列 */
+                align-items: center;
+                /* 居中对齐 */
+                margin-bottom: 10px;
+                /* 增加间距 */
+            }
+
+            .logoImage {
+                height: 80px;
+                /* 缩小logo大小 */
+                margin-right: 0;
+                /* 移除右边距 */
+                margin-bottom: 10px;
+                /* 增加底部间距 */
+            }
+
+            .slogan h1 {
+                font-size: 28px;
+                /* 缩小标题字体大小 */
+                text-align: center;
+                /* 标题居中 */
+            }
+
+            .navLinks {
+                flex-direction: column;
+                /* 导航链接垂直排列 */
+                align-items: center;
+                /* 居中对齐 */
+            }
+
+            .navLinks li {
+                margin: 5px 0;
+                /* 调整导航链接间距 */
+            }
+
+            .navLinks a {
+                font-size: 16px;
+                /* 缩小导航链接字体大小 */
+            }
+        }
+    </style>
+
+    <link rel="icon" href="favicon.ico" href="image/x-icon">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerContainer">
+            <div class="logoAndTitle">
+                <div class="slogan">
+                    <h1 onclick="window.location.href='community.html'">山海有嘉木</h1>
+                </div>
+            </div>
+            <ul class="navLinks">
+                <li><a href="../index.html">回到钱班主页</a>
+            </ul>
+        </div>
+        
+        <div class="introContainer" id="contactUs">
+            <h3>出师表（节选）</h3>
+            <p>先帝创业未半，而中道崩殂</p>
+            <p>今天下三分，益州疲弊，此诚危急存亡之秋也</p>
+            <p>然侍卫之臣不懈于内，忠志之士忘身于外者</p>
+            <p>盖追先帝之殊遇，欲报之于陛下也</p>
+            <p>诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也</p>
+        </div>
+        <br><br>
+        <hr>
+        <!-- 回到顶部按钮 -->
+        <button id="backToTopBtn" title="回到顶部">↑</button>
+        <p style="color: gray;">©万源中学高2028届钱学森班 2025，保留所有权利。</p>
+    </div>
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // 当用户滚动页面时显示或隐藏按钮
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
