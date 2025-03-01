@@ -223,6 +223,19 @@
             color: #007bff;
             margin-bottom: 5px;
         }
+
+        .domainLinks {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .domainLinks a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1em;
+        }
     </style>
 
     <link rel="icon" href="favicon.ico" href="image/x-icon">
@@ -403,9 +416,16 @@
             <hr>
             <!-- 回到顶部按钮 -->
             <button id="backToTopBtn" title="回到顶部">↑</button>
+            <div class="domainLinks">
+                <a href="https://wzqb.netlify.app">主域名</a>
+                <a href="https://wzqb.vercel.app">备用域名1</a>
+                <a href="http://gr3yph.github.io/wzqb">备用域名2</a>
+            </div>
+            <br>
             <p style="color: gray;">©万源中学高2028届钱学森班 2025，保留所有权利。</p>
         </div>
     </div>
+    <script src="easterEgg.js"></script>
     <script>
         // 回到顶部按钮逻辑
         const backToTopBtn = document.getElementById("backToTopBtn");
