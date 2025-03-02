@@ -130,13 +130,15 @@
 
         .searchBox {
             border: 1px solid blue;
-            border-radius: 2px;
+            border-radius: 5px;
             width: 50%;
             text-align: center;
             display: flex;
+            height: 35px;
         }
 
         .searchInput {
+            border-radius: 5px;
             border: none;
             width: 100%;
             outline: none;
@@ -151,6 +153,11 @@
             cursor: pointer;
             font-size: 0.5em;
             width: 20%;
+        }
+
+        .baiduLogo{
+            width: 30%;
+            height: auto;
         }
 
         /* 移动端样式 */
@@ -198,6 +205,19 @@
             .searchBox {
                 width: 80%;
             }
+
+            .searchButton{
+                width: 30%;
+            }
+
+            .baiduLogo {
+                width: 60%;
+            }
+        }
+
+        .footer{
+            position: fixed;
+            bottom:0;
         }
     </style>
 
@@ -209,9 +229,9 @@
         <div class="headerContainer">
             <div class="logoAndTitle">
                 <img src="img/logo.png" class="logoImage" alt="万源中学钱学森班 Logo"
-                    onclick="window.location.href='../index.html'">
+                    onclick="window.location.href='index.html'">
                 <div class="slogan">
-                    <h1 onclick="window.location.href='../index.html'">万源中学钱学森班</h1>
+                    <h1 onclick="window.location.href='index.html'">万源中学钱学森班</h1>
                 </div>
             </div>
             <ul class="navLinks">
@@ -219,7 +239,7 @@
             </ul>
         </div>
         <div class="searchContainer">
-            <img src="https://www.baidu.com/img/baidu_sylogo1.gif" alt="百度 Logo">
+            <img src="https://www.baidu.com/img/baidu_sylogo1.gif" alt="百度 Logo" class="baiduLogo">
             <div class="searchBox">
                 <input type="text" class="searchInput" placeholder="百度一下，你就知道" id="searchInput"
                     onkeydown="checkEnterKey(event)">
