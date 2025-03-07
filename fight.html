@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钱班清北争夺战</title>
+    <style>
+        body {
+            font-family: "黑体", sans-serif;
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .banner-time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            padding: 20px;
+            flex-wrap: wrap; /* 移动端换行 */
+        }
+        .banner {
+            font-size: 40px; /* 横幅特大 */
+            color: yellow;
+            background-color: red;
+            padding: 15px 30px;
+            margin: 10px; /* 移动端间距 */
+        }
+        .time {
+            font-size: 40px; /* 时间字体放大 */
+            color: black;
+            margin: 10px; /* 移动端间距 */
+        }
+        .title {
+            font-size: 36px; /* 标题放大 */
+            color: #333;
+            margin: 30px 0;
+            text-align: center; /* 移动端居中 */
+        }
+        .input-container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* 默认7列 */
+            gap: 15px;
+            padding: 20px;
+            width: 90%; /* 移动端宽度 */
+        }
+        .entry {
+            font-size: 20px; /* 输入框字体放大 */
+            text-align: center;
+            padding: 10px;
+            width: 100%; /* 移动端宽度 */
+        }
+        .info {
+            font-size: 16px; /* 分数和大学字体放大 */
+            text-align: center;
+        }
+        .leaderboard {
+            width: 90%; /* 移动端宽度 */
+            max-height: 300px; /* 排行榜高度 */
+            overflow-y: auto;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 30px 0;
+            background-color: antiquewhite;
+        }
+        .leaderboard-title {
+            font-size: 28px; /* 排行榜标题放大 */
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 20px; /* 表格字体放大 */
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        .info-label {
+            font-size: 24px; /* 信息标签放大 */
+            color: black;
+            margin: 30px 0;
+            text-align: center; /* 移动端居中 */
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap; /* 移动端换行 */
+            justify-content: center; /* 移动端居中 */
+        }
+        button {
+            font-size: 24px; /* 按钮字体放大 */
+            padding: 15px 30px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .restart-button {
+            background-color: #28a745;
+        }
+        @keyframes flash {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: purple; }
+            85% { color: pink; }
+            100% { color: red; }
+        }
+        .flash {
+            animation: flash 1.4s infinite;
+        }
+
+        /* 移动端样式 */
+        @media (max-width: 768px) {
+            .input-container {
+                grid-template-columns: repeat(3, 1fr); /* 移动端3列 */
+            }
+            .banner, .time {
+                font-size: 28px; /* 移动端横幅和时间字体缩小 */
+            }
+            .title {
+                font-size: 28px; /* 移动端标题字体缩小 */
+            }
+            .entry {
+                font-size: 18px; /* 移动端输入框字体缩小 */
+            }
+            .info {
+                font-size: 14px; /* 移动端分数和大学字体缩小 */
+            }
+            .leaderboard-title {
+                font-size: 24px; /* 移动端排行榜标题字体缩小 */
+            }
+            table {
+                font-size: 16px; /* 移动端表格字体缩小 */
+            }
+            .info-label {
+                font-size: 20px; /* 移动端信息标签字体缩小 */
+            }
+            button {
+                font-size: 20px; /* 移动端按钮字体缩小 */
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">返回万源中学钱学森班</a>
+    <div class="banner-time">
+        <div class="banner">C9是底线</div>
+        <div class="time" id="time">00:00:00</div>
+        <div class="banner">清北是目标</div>
+    </div>
+    <div class="title">钱班清北争夺战</div>
+    <div class="input-container" id="input-container"></div>
+    <div class="leaderboard">
+        <div class="leaderboard-title">排行榜</div>
+        <table id="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>名次</th>
+                    <th>姓名</th>
+                    <th>高考总分</th>
+                    <th>录取大学</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 排行榜内容动态生成 -->
+            </tbody>
+        </table>
+    </div>
+    <div class="info-label" id="info-label">等待开始……</div>
+    <div class="button-container">
+        <button id="start-button" onclick="startGame()">开始</button>
+        <button id="restart-button" class="restart-button" onclick="restartGame()" disabled>重置</button>
+    </div>
+
+    <script>
+        // 姓名列表
+        const nameList = [
+            '邓博驺', '胡程程', '李贵漫', '刘家欢', '李堂博', '李章萍', '李仲轩', '李晓璐', '蒲森洁', '任蝶',
+            '孙思桐', '田楠', '王本鑫', '谢馨怡', '杨锦程', '姚楷瑞', '喻鹏杰', '张芮', '张胜言', '张宗奕',
+            '赵娜', '赵仁博', '朱浩宇', '朱闽中', '周健睿', '周子博'
+        ];
+
+        // 大学列表及其分数线范围
+        const universities = [
+            { name: "清华大学", minScore: 680, maxScore: 740 },
+            { name: "北京大学", minScore: 680, maxScore: 740 },
+            { name: "复旦大学", minScore: 670, maxScore: 730 },
+            { name: "上海交通大学", minScore: 670, maxScore: 730 },
+            { name: "浙江大学", minScore: 660, maxScore: 720 },
+            { name: "南京大学", minScore: 650, maxScore: 710 },
+            { name: "中国科学技术大学", minScore: 650, maxScore: 710 },
+            { name: "哈尔滨工业大学", minScore: 640, maxScore: 700 },
+            { name: "西安交通大学", minScore: 640, maxScore: 700 },
+            { name: "同济大学", minScore: 630, maxScore: 690 },
+            { name: "武汉大学", minScore: 620, maxScore: 680 },
+            { name: "华中科技大学", minScore: 620, maxScore: 680 },
+            { name: "中山大学", minScore: 620, maxScore: 680 },
+            { name: "四川大学", minScore: 620, maxScore: 680 },
+            { name: "东南大学", minScore: 620, maxScore: 680 }
+        ];
+
+        // 全局变量
+        let eliminatedIndices = []; // 记录已经被淘汰的同学的索引
+        let scores = {}; // 记录每个同学的高考总分
+        let currentScore = 620; // 初始分数
+        let flashInterval; // 七彩闪烁的定时器
+
+        // 初始化输入框
+        const inputContainer = document.getElementById('input-container');
+        nameList.forEach((name, index) => {
+            // 每个名字、分数和大学放在一个容器中
+            const container = document.createElement('div');
+            container.style.gridColumn = 'span 1'; // 每列占1份
+
+            const entry = document.createElement('input');
+            entry.className = 'entry';
+            entry.value = name;
+            entry.readOnly = true;
+            container.appendChild(entry);
+
+            const scoreLabel = document.createElement('div');
+            scoreLabel.className = 'info';
+            scoreLabel.id = `score-${index}`;
+            container.appendChild(scoreLabel);
+
+            const universityLabel = document.createElement('div');
+            universityLabel.className = 'info';
+            universityLabel.id = `university-${index}`;
+            container.appendChild(universityLabel);
+
+            inputContainer.appendChild(container);
+        });
+
+        // 更新时间
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+
+        // 开始游戏
+        function startGame() {
+            eliminatedIndices = [];
+            scores = {};
+            currentScore = 620;
+            document.getElementById('start-button').disabled = true;
+            document.getElementById('restart-button').disabled = true;
+            document.getElementById('info-label').textContent = '游戏开始！';
+            document.getElementById('leaderboard-table').getElementsByTagName('tbody')[0].innerHTML = '';
+            nameList.forEach((name, index) => {
+                document.getElementById(`score-${index}`).textContent = '';
+                document.getElementById(`university-${index}`).textContent = '';
+                inputContainer.children[index].children[0].style.color = 'black'; // 重置文字颜色
+            });
+            eliminateNext();
+        }
+
+        // 淘汰逻辑
+        function eliminateNext() {
+            const remainingIndices = nameList.map((_, index) => index).filter(i => !eliminatedIndices.includes(i));
+            if (remainingIndices.length > 5) {
+                const eliminatedIndex = remainingIndices[Math.floor(Math.random() * remainingIndices.length)];
+                eliminatedIndices.push(eliminatedIndex);
+                flashNames(eliminatedIndex);
+            } else {
+                assignUniversities(remainingIndices);
+                showLeaderboard();
+                flashWinners(remainingIndices);
+                document.getElementById('restart-button').disabled = false;
+            }
+        }
+
+        // 快速切换特效
+        function flashNames(eliminatedIndex) {
+            let count = 0;
+            const flashInterval = setInterval(() => {
+                if (count < 30) {
+                    const randomName = nameList[Math.floor(Math.random() * nameList.length)];
+                    document.getElementById('info-label').textContent = randomName;
+                    count++;
+                } else {
+                    clearInterval(flashInterval);
+                    const name = nameList[eliminatedIndex];
+                    const score = currentScore;
+                    currentScore += Math.floor(Math.random() * 6); // 递增0~5分
+                    if (currentScore > 740) currentScore = 740;
+                    const university = assignUniversityByScore(score);
+                    document.getElementById(`score-${eliminatedIndex}`).textContent = `高考总分：${score}`;
+                    document.getElementById(`university-${eliminatedIndex}`).textContent = `录取大学：${university}`;
+                    scores[name] = score;
+                    document.getElementById('info-label').textContent = `${name} 被淘汰了！`;
+                    setTimeout(eliminateNext, 2000);
+                }
+            }, 100);
+        }
+
+        // 根据分数分配大学
+        function assignUniversityByScore(score) {
+            for (const uni of universities) {
+                if (score >= uni.minScore && score <= uni.maxScore) {
+                    return uni.name;
+                }
+            }
+            return universities[universities.length - 1].name; // 默认返回最后一个大学
+        }
+
+        // 分配清北和其他大学
+        function assignUniversities(finalIndices) {
+            finalIndices.forEach(index => {
+                const score = Math.floor(Math.random() * (740 - 680 + 1)) + 680;
+                const university = Math.random() < 0.5 ? '清华大学' : '北京大学';
+                document.getElementById(`score-${index}`).textContent = `高考总分：${score}`;
+                document.getElementById(`university-${index}`).textContent = `录取大学：${university}`;
+                scores[nameList[index]] = score;
+            });
+        }
+
+        // 显示排行榜
+        function showLeaderboard() {
+            const sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+            const tbody = document.getElementById('leaderboard-table').getElementsByTagName('tbody')[0];
+            tbody.innerHTML = ''; // 清空表格内容
+            sortedScores.forEach(([name, score], index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${name}</td>
+                    <td>${score}</td>
+                    <td>${document.getElementById(`university-${nameList.indexOf(name)}`).textContent}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // 七彩闪烁效果
+        function flashWinners(winnerIndices) {
+            winnerIndices.forEach(index => {
+                const entry = inputContainer.children[index].children[0];
+                entry.classList.add('flash');
+            });
+        }
+
+        // 重置游戏
+        function restartGame() {
+            document.getElementById('start-button').disabled = false;
+            document.getElementById('restart-button').disabled = true;
+            document.getElementById('info-label').textContent = '等待开始……';
+            nameList.forEach((_, index) => {
+                const entry = inputContainer.children[index].children[0];
+                entry.classList.remove('flash');
+                entry.style.color = 'black'; // 重置文字颜色
+            });
+        }
+    </script>
+</body>
+</html>
