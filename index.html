@@ -211,30 +211,9 @@
             color: black;
         }
 
-        .communityLinks {
-            text-align: left;
-            margin-top: 10px;
-        }
-
-        .communityLinks a {
-            display: block;
-            text-decoration: none;
-            font-size: 1.2em;
-            color: #007bff;
-            margin-bottom: 5px;
-        }
-
-        .domainLinks {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .domainLinks a {
-            text-decoration: none;
-            color: #007bff;
-            font-size: 1em;
+        .mateContainer:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 
@@ -265,15 +244,6 @@
             <div class="introContainer" id="classStyle">
                 <h3>班级风采</h3>
                 <div class="articleContainer">
-                    <img src="classStyleThreads/img/classStyleThreads_2025_03_07_15.jpeg" class="articlePoster">
-                    <div>
-                        <a class="threadsLink"
-                            href="classStyleThreads/classStyleThreads_2025_03_07_01.html">3.6历史朋友圈成果展览</a>
-                        <p>穿越时空，对话历史！在“历史朋友圈”活动中，同学们化身历史人物，分享他们的“朋友圈”动态，带你领略不同时代的精彩瞬间。让我们一起走进历史，感受那些鲜活的故事与人物！
-                        </p>
-                    </div>
-                </div>
-                <div class="articleContainer">
                     <img src="classStyleThreads/img/classStyleThread_2025_02_22_02.png" class="articlePoster">
                     <div>
                         <a class="threadsLink"
@@ -291,16 +261,13 @@
                         </p>
                     </div>
                 </div>
+                
             </div>
             <br>
             <hr>
             <div class="introContainer" id="matesDaily" style="display: flex; justify-content: space-between; align-items: center;">
                 <h3>同学日常</h3>
                 <strong><a href="matesDailyThreads/matesList.html" style="text-decoration: none;color: black;">全部同学信息></a></strong>
-            </div>
-            <div class="communityLinks">
-                <a href="./community/literaryCommunity.html">山海有嘉木-文学社</a>
-                <!-- 未来可以在这里添加更多社团链接 -->
             </div>
             <p>暂时没有同学发布日常哦~</p>
             <br>
@@ -424,17 +391,9 @@
             <hr>
             <!-- 回到顶部按钮 -->
             <button id="backToTopBtn" title="回到顶部">↑</button>
-            <div class="domainLinks">
-                <a href="navigator.html">导航页</a>
-                <a href="https://wzqb.netlify.app">主域名</a>
-                <a href="https://wzqb.vercel.app">备用域名1</a>
-                <a href="http://gr3yph.github.io/wzqb">备用域名2</a>
-            </div>
-            <br>
             <p style="color: gray;">©万源中学高2028届钱学森班 2025，保留所有权利。</p>
         </div>
     </div>
-    <a style="color: white;" href="easterEgg.html">哟吼，有点实力，竟然看见我了，点点试试？</a>
     <script>
         // 回到顶部按钮逻辑
         const backToTopBtn = document.getElementById("backToTopBtn");
