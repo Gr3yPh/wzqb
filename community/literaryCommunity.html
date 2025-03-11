@@ -264,13 +264,21 @@
         const backToTopBtn = document.getElementById("backToTopBtn");
 
         // 当用户滚动页面时显示或隐藏按钮
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector('.content').addEventListener('scroll', function () {
+            if (this.scrollTop > 20) {
                 backToTopBtn.style.display = "block";
             } else {
                 backToTopBtn.style.display = "none";
             }
-        };
+        });
+
+        // 点击按钮时平滑滚动到顶部
+        backToTopBtn.addEventListener("click", function () {
+            document.querySelector('.content').scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     </script>
 </body>
 

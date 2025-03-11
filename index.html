@@ -422,6 +422,14 @@
                 backToTopBtn.style.display = "none";
             }
         };
+
+        // 点击按钮时平滑滚动到顶部
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     </script>
 </body>
 
