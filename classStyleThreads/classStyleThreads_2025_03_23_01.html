@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>万源中学钱学森班</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: "楷体";
+            scroll-behavior: smooth;
+        }
+
+        .headerContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .logoAndTitle {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoImage {
+            height: 100px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .slogan {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navLinks {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navLinks li {
+            margin: 0 15px;
+        }
+
+        .navLinks a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        .contentContainer {
+            padding: 20px;
+            text-align: left;
+        }
+
+
+        .articleContainer h2 {
+            text-align: center;
+            /* 标题居中 */
+        }
+
+        .articleContainer img {
+            width: 50%;
+            text-align: center;
+        }
+
+        .articleInfo {
+            color: gray;
+            text-align: center;
+            /* 文章信息居中 */
+        }
+
+        .articleImageContainer {
+            text-align: center;
+        }
+
+        /* 回到顶部按钮样式 */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
+        /* 移动端样式 */
+        @media screen and (max-width: 768px) {
+            .headerContainer {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .logoAndTitle {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .logoImage {
+                height: 80px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .slogan h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .navLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navLinks li {
+                margin: 5px 0;
+            }
+
+            .navLinks a {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerContainer">
+            <div class="logoAndTitle">
+                <img src="../img/logo.png" class="logoImage" alt="万源中学钱学森班 Logo"
+                    onclick="window.location.href='../index.html'">
+                <div class="slogan">
+                    <h1 onclick="window.location.href='../index.html'">万源中学钱学森班</h1>
+                </div>
+            </div>
+            <ul class="navLinks">
+                <li><a href="../index.html">回到主页</a></li>
+            </ul>
+        </div>
+
+        <div class="contentContainer">
+            <div class="articleContainer">
+                <h2>风吹绿希望 汗水浇灌未来：我班师生积极参与市植树节活动</h2>
+                <p class="articleInfo">最后编辑于：2025年3月23日13:33:41 作者：管理员</p>
+                <div class="articleImageContainer">
+                    <img src="img/classStyleThreads_2025_03_23_01.jpeg" alt="植树节" />
+                </div>
+                <div class="articleImageContainer">
+                    <img src="img/classStyleThreads_2025_03_23_02.jpeg" alt="植树节" />
+                </div>
+                <div class="articleImageContainer">
+                    <img src="img/classStyleThreads_2025_03_23_03.jpeg" alt="植树节" />
+                </div>
+                <div class="articleImageContainer">
+                    <img src="img/classStyleThreads_2025_03_23_04.jpeg" alt="植树节" />
+                </div>
+                <div class="articleImageContainer">
+                    <img src="img/classStyleThreads_2025_03_23_05.jpeg" alt="植树节" />
+                </div>
+                <div class="articleImageContainer">
+                    <img src="img/classStyleThreads_2025_03_23_06.jpeg" alt="植树节" />
+                </div>
+                <div class="articleImageContainer">
+                    <img src="img/classStyleThreads_2025_03_23_07.jpeg" alt="植树节" />
+                </div>
+                <div class="articleContainer">
+                    <p>春风拂面，万物复苏。在第45个植树节到来之际，我班师生积极响应号召，参加了本市植树活动。在明媚的春光中，同学们挥洒汗水，播种希望，用实际行动践行绿色发展理念，为城市增添了一抹新绿。</p>
+                    <p>清晨，阳光明媚，微风和煦。我校师生早早来到位于市郊的植树点，与来自其他学校的师生以及市领导们汇合。简单的启动仪式后，大家便热火朝天地投入到植树活动中。同学们分工合作，有的挥锹挖坑，有的扶苗培土，有的提水浇灌，个个干劲十足，现场一片繁忙景象。</p>
+                    <p>“这是我第一次参加植树活动，虽然有点累，但看到自己亲手种下的小树苗，心里特别高兴。”本班的胡同学一边擦着额头的汗水，一边兴奋地说道。老师们也积极参与其中，一边指导同学们植树，一边讲解植树造林的意义，现场气氛热烈而融洽。</p>
+                    <p>经过一上午的辛勤劳动，一棵棵新栽的树苗迎风挺立，为原本空旷的土地增添了一片生机。望着自己的劳动成果，同学们的脸上洋溢着自豪的笑容。大家纷纷表示，参加植树活动不仅是一次难得的劳动体验，更是一次生动的环保教育课，增强了大家爱护环境、保护生态的意识。</p>
+                    <p>“十年树木，百年树人。”此次植树活动不仅美化了环境，更在同学们心中播下了绿色的种子。相信在不久的将来，这些小树苗必将茁壮成长，成为参天大树，为城市增添一片绿荫。而我们新时代的青少年，也将在党的阳光雨露下，像这些小树苗一样，茁壮成长，成为建设祖国的栋梁之材！</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 回到顶部按钮 -->
+        <button id="backToTopBtn" title="回到顶部">↑</button>
+        <hr>
+        <p style="color: gray;">©万源中学高2028届钱学森班 2025，保留所有权利。</p>
+    </div>
+
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // 当用户滚动页面时显示或隐藏按钮
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // 点击按钮时平滑滚动到顶部
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+
+</html>
