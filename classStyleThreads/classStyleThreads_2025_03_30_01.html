@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>万源中学钱学森班</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: "楷体";
+            scroll-behavior: smooth;
+        }
+
+        .headerContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .logoAndTitle {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoImage {
+            height: 100px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .slogan {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navLinks {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navLinks li {
+            margin: 0 15px;
+        }
+
+        .navLinks a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        .contentContainer {
+            padding: 20px;
+            text-align: left;
+        }
+
+
+        .articleContainer h2 {
+            text-align: center;
+            /* 标题居中 */
+        }
+
+        .articleContainer img {
+            width: 50%;
+            text-align: center;
+        }
+
+        .articleInfo {
+            color: gray;
+            text-align: center;
+            /* 文章信息居中 */
+        }
+
+        .articleImageContainer {
+            text-align: center;
+        }
+
+        /* 回到顶部按钮样式 */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
+        /* 移动端样式 */
+        @media screen and (max-width: 768px) {
+            .headerContainer {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .logoAndTitle {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .logoImage {
+                height: 80px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .slogan h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .navLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navLinks li {
+                margin: 5px 0;
+            }
+
+            .navLinks a {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="headerContainer">
+            <div class="logoAndTitle">
+                <img src="../img/logo.png" class="logoImage" alt="万源中学钱学森班 Logo"
+                    onclick="window.location.href='../index.html'">
+                <div class="slogan">
+                    <h1 onclick="window.location.href='../index.html'">万源中学钱学森班</h1>
+                </div>
+            </div>
+            <ul class="navLinks">
+                <li><a href="../index.html">回到主页</a></li>
+            </ul>
+        </div>
+
+        <div class="contentContainer">
+            <div class="articleContainer">
+                <h2>钱学森班开展历史改编剧活动</h2>
+                <p class="articleInfo">最后编辑于：2025年3月30日12:43:20 作者：管理员</p>
+                <div class="articleImageContainer">
+                    <video controls>
+                        <source src="img/classStyleThreads_2025_03_30_01.mp4" type="video/mp4">
+                        您的浏览器不支持视频标签。
+                    </video>
+                </div>
+                <p>三月末的班会上，我班同学自发组织了一场历史短剧表演。以《巴黎和会》为蓝本的话剧创作，由胡程程、王本鑫等同学担纲主演，生动再现了外交风云中的经典场景。</p>
+
+                <p>剧组利用课后时间研读历史资料，自主设计了三幕核心剧情。</p>
+
+                <p>胡程程饰演的美方代表成为全场焦点。当他演绎拒签条约的高光时刻，那个将钢笔重重摔在"条约文书"上的即兴动作，引得全班同学自发鼓掌叫好。王本鑫塑造的日方代表惟妙惟肖，连鞠躬时手掌贴合裤缝的细节都经过反复琢磨。</p>
+
+                <p>道具组的创意令人眼前一亮：用扫把杆改造的签字钢笔、作业本装订的"国际条约"，以及用彩色粉笔在黑板绘制的世界地图背景。特别是当多国代表同时签字时，课桌拼接成的长条约桌恰好容下所有"参会代表"。</p>
+
+                <p>这场短剧从筹备到演出仅用不到了一周时间，却处处可见同学们的巧思。正如课后总结时大家感慨的：历史不是冰冷的文字，当那些课本上的名字变成身边同学扮演的角色，我们才真正触摸到了历史的温度。</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 回到顶部按钮 -->
+        <button id="backToTopBtn" title="回到顶部">↑</button>
+        <hr>
+        <p style="color: gray;">©万源中学高2028届钱学森班 2025，保留所有权利。</p>
+    </div>
+
+    <script>
+        // 回到顶部按钮逻辑
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // 当用户滚动页面时显示或隐藏按钮
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // 点击按钮时平滑滚动到顶部
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+
+</html>
