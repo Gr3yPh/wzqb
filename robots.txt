@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /navigator.html
+Disallow: /easterEgg.html
+Disallow: /backup.txt
+Disallow: /addICP.py
+Disallow: /removeICP.py
+Disallow: /matesDailyThreads/
