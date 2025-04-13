@@ -1,0 +1,2 @@
+origin	https://github.com/Gr3yPh/wzqb.git (fetch)
+origin	https://github.com/Gr3yPh/wzqb.git (push)
